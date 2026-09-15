@@ -1,0 +1,28 @@
+{
+ "schema": 1,
+ "observed_on": "2026-09-11",
+ "clients": {
+  "claude-code": {
+   "version": "2.1.268",
+   "installed": true,
+   "auth_method": "claude.ai",
+   "subscription": "max ($100/month, user confirmed)",
+   "overage_status": "usage credits disabled in account UI; matched to supported CLI auth status 2026-09-11T19:12:55Z; recheck before execution",
+   "acceptance": "pending"
+  },
+  "codex-cli": {
+   "version": "0.154.0",
+   "installed": true,
+   "observation": "Portable local binary; supported login status confirms ChatGPT subscription under owner account",
+   "acceptance": "pending"
+  },
+  "copilot-cli": {
+   "version": "1.0.83",
+   "installed": true,
+   "observation": "Portable local binary 1.0.83; headless -p with JSON output, isolated COPILOT_HOME, Lumen MCP only, all file and shell tools excluded, 30-credit session cap; two handoff pairs with Claude Code passed 2026-09-13 (docs/validation/native-handoff-2026-09-13)",
+   "acceptance": "pending",
+   "subscription": "GitHub Copilot Pro on the gh-reported account, verified on the GitHub settings page 2026-09-13; 1,500 included AI credits per month",
+   "overage_status": "additional usage not enabled, USD 0 budget, observed 2026-09-13; recheck before execution"
+  }
+ }
+}

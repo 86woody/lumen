@@ -1,0 +1,21 @@
+{
+  "schema": 1, "release": 2, "max_cost_usd": 0, "capabilities": ["lexical"],
+  "exclusions": ["embedding-dependent baselines", "opaque hosted retrieval", "paid or unverified inference interfaces"],
+  "cases": {
+    "release-1": {"remaining": ["Full Release 1 acceptance"]},
+    "bm25-reference": {"remaining": ["Pinned LongMemEval_s independent reference replication"]},
+    "judge-calibration": {"remaining": ["Permitted answer/judge interfaces; planted right/wrong calibration"]},
+    "forgetting": {"remaining": ["FactConsolidation and ForgetEval eligible protocol runs"]},
+    "monorepo-comparison": {"remaining": ["Frozen held-out repo-blind comparison"]},
+    "longmemeval-s": {"remaining": ["Eligible frozen S runs"]},
+    "longmemeval-m": {"remaining": ["Eligible frozen M runs"]},
+    "beam-10m": {"remaining": ["Licensed data and verified embedding-free protocol; full runs"]},
+    "longmemeval-v2": {"remaining": ["Eligible Small/Medium runs"]},
+    "coding-study": {"remaining": ["Power analysis and sequential real-repo tasks on two hosts"]},
+    "decay": {"remaining": ["Frozen store and second reader comparison"]},
+    "ablations": {"remaining": ["Matched-budget permitted additions; remove unearned complexity"]},
+    "lifecycle-cost": {"remaining": ["Capture/maintenance/reader/judge/local compute at 1/10/100 queries"]},
+    "reproduction": {"remaining": ["Windows/Linux deterministic replication and preregistered stochastic intervals"]},
+    "permitted-raw-outputs": {"remaining": ["Locally prepared licensed raw outputs and reproduction kit; publication separately authorized"]}
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "status": "frozen-before-scoring",
+  "dataset_lock": "evals/longmemeval.lock.json",
+  "cohort": "all non-abstention questions; expected 470; discrepancies fail",
+  "unit": "session",
+  "duplicate_session_ids": "Preserve every source occurrence and its corpus ordinal; score returned source IDs as sets. Twelve histories contain duplicate IDs. No histories are dropped.",
+  "retrieval_k": 5,
+  "repetitions": 3,
+  "baseline_names": ["no-memory", "bm25-user-only", "bm25-all-turns", "fts5-all-turns"],
+  "bm25": {"k1": "1.5", "b": "0.75", "epsilon": "0.25", "tokenizer": "case-sensitive literal space split", "tie_break": "descending corpus ordinal"},
+  "fts5": {"tokenizer": "unicode61 remove_diacritics 2", "query": "OR of escaped Unicode word tokens", "tie_break": "ascending corpus ordinal"},
+  "evaluation": {"primary": "answer-session recall-any@5 over 470", "secondary": ["recall-all@5", "fraction of evidence sessions@5"], "upstream_eligibility": "user-only gold labels additionally reported; assistant-only gold is not silently omitted"},
+  "holdout_policy": "Reference calibration only. No tuning on its results. Future feature experiments require independently frozen development/held-out histories.",
+  "statistics": {"unit": "question history", "bootstrap_samples": 2000, "seed": 1729, "confidence": "95% percentile"},
+  "constraints": {"additional_cost_usd": 0, "models": "disabled", "embeddings": "prohibited", "network_during_scoring": "disabled"},
+  "pending": ["Markdown plus rg", "full context through permitted reader", "rolling summary through permitted text interface", "answer and judge calibration", "reference 93.8 protocol identification"]
+}

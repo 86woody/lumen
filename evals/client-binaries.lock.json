@@ -1,0 +1,65 @@
+{
+  "codex": {
+    "version": "rust-v0.154.0",
+    "asset": {
+      "name": "codex-x86_64-pc-windows-msvc.exe.zip",
+      "size": 104759949,
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.154.0/codex-x86_64-pc-windows-msvc.exe.zip",
+      "digest": "sha256:53685f9f6bd171d4bd7d6c2be724fc04f6737a4001eb8471ec59824e5adc8042"
+    },
+    "executables": [
+      {
+        "path": "artifacts\\local\\clients\\codex\\codex-command-runner.exe",
+        "sha256": "a57ca8beb786a05f36c97309e8a716610c70ced9946dc1437bbbaf4566c0c403"
+      },
+      {
+        "path": "artifacts\\local\\clients\\codex\\codex-windows-sandbox-setup.exe",
+        "sha256": "ea27f90a0746e2464a829cd6e1de0dcafb77c8be603de899661e8c006ef33937"
+      },
+      {
+        "path": "artifacts\\local\\clients\\codex\\codex-x86_64-pc-windows-msvc.exe",
+        "sha256": "be96b992178b1e467c225800da0d65f2c86d5eba1ef0b14632f65db381cbdfde"
+      }
+    ],
+    "inference": "not executed",
+    "embedding_capabilities": "not authorized; client tool/configuration audit pending"
+  },
+  "copilot": {
+    "version": "v1.0.83",
+    "asset": {
+      "name": "copilot-win32-x64.zip",
+      "size": 85369705,
+      "url": "https://github.com/github/copilot-cli/releases/download/v1.0.83/copilot-win32-x64.zip",
+      "digest": "sha256:0e07221a275fdf7e61619c53566e3a421fd646d74d8e9ca491dbbff221f22945"
+    },
+    "executables": [
+      {
+        "path": "artifacts\\local\\clients\\copilot\\copilot.exe",
+        "sha256": "d3f3bb7b8bbf68357ad29f514a179d09f76135483d8bfb643131b8600f671ee2"
+      }
+    ],
+    "inference": "not executed",
+    "embedding_capabilities": "not authorized; client tool/configuration audit pending"
+  },
+  "powershell": {
+    "version": "v7.6.6",
+    "asset": {
+      "name": "PowerShell-7.6.6-win-x64.zip",
+      "size": 106328873,
+      "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.6/PowerShell-7.6.6-win-x64.zip",
+      "digest": "sha256:02fe458be20493fbdf43f61ea20610b811ee6c738ab1676c61b9cfcd1a33c860"
+    },
+    "executables": [
+      {
+        "path": "artifacts\\local\\clients\\powershell\\createdump.exe",
+        "sha256": "6a1b3a1af1afc2b756e2e45c36a3ac0d05d3134b14d8c66bccfdbcc1f308b4e1"
+      },
+      {
+        "path": "artifacts\\local\\clients\\powershell\\pwsh.exe",
+        "sha256": "bfb46af89433268872ddb43d1ca7a3f433452ee91ed356a9786940f90118e285"
+      }
+    ],
+    "inference": "not executed",
+    "embedding_capabilities": "not authorized; client tool/configuration audit pending"
+  }
+}
