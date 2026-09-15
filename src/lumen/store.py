@@ -68,7 +68,8 @@ def connect(path):
     db.execute("PRAGMA journal_mode=WAL")
     db.execute("PRAGMA synchronous=FULL")
     db.execute("PRAGMA secure_delete=ON")
-    db.enable_load_extension(False)
+    if hasattr(db, "enable_load_extension"):  # absent when the interpreter was built without extension loading
+        db.enable_load_extension(False)
     return db
 
 

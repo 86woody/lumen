@@ -24,7 +24,9 @@ jobs:
       - run: git --version && python -c "import sqlite3; print(sqlite3.sqlite_version)"
       - run: python tools/inventory.py
       - run: python tools/offline-tests.py
-      - run: python -m pip wheel --no-index --find-links artifacts/local/wheels --no-deps --wheel-dir dist .
+      # The tests above ran with networking denied. The build backend is fetched here because the
+      # pinned local wheel under artifacts/local/wheels is never committed.
+      - run: python -m pip wheel --no-deps --wheel-dir dist .
       - run: python tools/verify-install.py
         continue-on-error: true
       - uses: actions/upload-artifact@v4
