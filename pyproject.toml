@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lumen-memory"
+version = "0.1.0a1"
+description = "Offline, evidence-preserving lexical memory"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.scripts]
+lumen = "lumen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

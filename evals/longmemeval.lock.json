@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "dataset": "longmemeval-cleaned",
+  "dataset_revision": "98d7416c24c778c2fee6e6f3006e7a073259d48f",
+  "source_revision": "9e0b455f4ef0e2ab8f2e582289761153549043fc",
+  "license": "MIT",
+  "files": {
+    "dataset-card.md": {
+      "url": "https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned/raw/98d7416c24c778c2fee6e6f3006e7a073259d48f/README.md",
+      "sha256": "fe31783d4e5d132681a25e4192e85def8edd214094939879f5283818c0a4a3e0",
+      "bytes": 626
+    },
+    "source-license.txt": {
+      "url": "https://raw.githubusercontent.com/xiaowu0162/LongMemEval/9e0b455f4ef0e2ab8f2e582289761153549043fc/LICENSE",
+      "sha256": "d3c4b9aa54759df6ded337978a6f3b55b75615e5e4525c3b82d7e2627d4b9732",
+      "bytes": 1062
+    },
+    "retrieval-source.txt": {
+      "url": "https://raw.githubusercontent.com/xiaowu0162/LongMemEval/9e0b455f4ef0e2ab8f2e582289761153549043fc/src/retrieval/run_retrieval.py",
+      "sha256": "efd7fc5969a904717741fadca3c7dc73611ddbb2aaf3ef33117ebb6943b3e346",
+      "bytes": 21271
+    },
+    "scorer-source.txt": {
+      "url": "https://raw.githubusercontent.com/xiaowu0162/LongMemEval/9e0b455f4ef0e2ab8f2e582289761153549043fc/src/retrieval/eval_utils.py",
+      "sha256": "c98b8d1096877a15aa755c9de44fe33c195298466a2eb6f3c0f9f6bde8c72349",
+      "bytes": 1888
+    },
+    "longmemeval_s_cleaned.json": {
+      "url": "https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned/resolve/98d7416c24c778c2fee6e6f3006e7a073259d48f/longmemeval_s_cleaned.json",
+      "sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "bytes": 277383467
+    }
+  },
+  "upstream_execution": "excluded: unconditional embedding model and API imports",
+  "permitted_execution": "independent local lexical adapter only; raw source stored as text, never imported"
+}

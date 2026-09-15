@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "release": 1,
+  "max_cost_usd": 0,
+  "capabilities": [
+    "lexical"
+  ],
+  "configuration": {
+    "automatic_retirement": "disabled",
+    "text_generation": "disabled",
+    "resident": "disabled"
+  },
+  "cases": {
+    "R-01": {
+      "tests": [
+        "test_recovery.RecoveryTests.test_actual_process_death_at_capture_transitions",
+        "test_recovery.RecoveryTests.test_multiple_real_processes_capture_once",
+        "test_recovery.RecoveryTests.test_large_evidence_process_faults_and_erasure",
+        "test_capture.CaptureStoreTests.test_actual_process_death_at_capture_stop_transitions",
+        "test_consolidation.ConsolidatorTests.test_runs_are_idempotent_interval_gated_and_atomic_per_episode"
+      ],
+      "remaining": [
+        "Complete persistence-transition coverage including large evidence and daemon restart"
+      ]
+    },
+    "R-02": {
+      "tests": [
+        "test_core.ProjectionTests.test_bounded_correction_and_recurrence",
+        "test_core.StoreTests.test_durable_retry_index_and_known_at"
+      ],
+      "remaining": [
+        "Historical version and all-topology integration"
+      ]
+    },
+    "R-03": {
+      "tests": [
+        "test_core.ProjectionTests.test_bounded_correction_and_recurrence"
+      ],
+      "remaining": [
+        "All-topology recurrence integration"
+      ]
+    },
+    "R-04": {
+      "tests": [
+        "test_core.ProjectionTests.test_partial_platform_branch_and_path",
+        "test_policy.RelationVocabularyTests.test_declared_dimensions_widen_matching_and_change_the_state_token"
+      ],
+      "remaining": [
+        "Multi-valued and undeclared relations; region subtraction adversarial cases"
+      ]
+    },
+    "R-05": {
+      "tests": [
+        "test_core.ProjectionTests.test_shuffled_forks_and_semantic_token",
+        "test_recovery.RecoveryTests.test_concurrent_revision_token_has_one_winner"
+      ],
+      "remaining": [
+        "Concurrent shared proposals and all-topology reconciliation integration"
+      ]
+    },
+    "R-06": {
+      "tests": [
+        "test_workspace.WorkspaceTests.test_three_topologies_move_retains_id_and_citations"
+      ],
+      "remaining": [
+        "Source moves across supported platforms; expanded discovery"
+      ]
+    },
+    "R-07": {
+      "tests": [
+        "test_workspace.WorkspaceTests.test_sparse_and_uninitialized_coverage"
+      ],
+      "remaining": [
+        "Supported-platform coverage beyond Windows"
+      ]
+    },
+    "R-08": {
+      "tests": [
+        "test_workspace.WorkspaceTests.test_two_home_review_requires_authority_and_preserves_origin",
+        "test_shared_files.SharedFileTests.test_checkout_recall_requires_review_and_rechecks_after_restart",
+        "test_shared_files.SharedFileTests.test_independent_review_batches_over_100_and_erasure",
+        "test_security.SecurityTests.test_removed_project_revokes_cached_service_grant",
+        "test_security.SecurityTests.test_removed_dependency_revokes_related_project_without_restart",
+        "test_codeowners.CodeownersTests.test_init_routes_explicit_owners_and_check_detects_drift",
+        "test_codeowners.CodeownersTests.test_preserves_existing_rules_and_rejects_unsafe_routing",
+        "test_audit_ci.AuditCITests.test_ci_checks_review_routing_and_sources_without_admission",
+        "test_shared_files.SharedFileTests.test_missing_control_targets_cannot_be_approved_or_scanned",
+        "test_semantics_extended.ExtendedSemanticsTests.test_reconciliation_cannot_select_inapplicable_alternative",
+        "test_semantics_extended.ExtendedSemanticsTests.test_deep_revision_history_and_cycle_without_recursion",
+        "test_semantics_extended.ExtendedSemanticsTests.test_deep_reference_closure_propagates_pending_and_rejects_cycle",
+        "test_share_flow.ShareFlowTests.test_branches_per_repo_batch_leave_the_checkout_untouched",
+        "test_share_flow.ShareFlowTests.test_branching_requires_review_and_refuses_erased_events",
+        "test_share_flow.ShareFlowTests.test_audit_ci_accepts_only_an_explicitly_configured_pending_authority",
+        "test_share_flow.ShareFlowTests.test_audit_ci_rejects_silent_competing_successors_and_accepts_explicit_disputes"
+      ],
+      "remaining": [
+        "Forge push, pull request and owner-review evidence (ADR 0008); full private-lineage and propagation suite"
+      ]
+    },
+    "R-09": {
+      "tests": [
+        "test_recovery.RecoveryTests.test_backup_rollback_and_stale_capture_never_resurrect",
+        "test_recovery.RecoveryTests.test_actual_process_death_after_deletion_commit",
+        "test_recovery.RecoveryTests.test_export_process_death_remains_managed",
+        "test_recovery.RecoveryTests.test_purge_export_rewrite_process_death",
+        "test_recovery.RecoveryTests.test_staged_process_death_and_purge",
+        "test_migration.MigrationTests.test_restore_reproduces_answers_tokens_tools_and_imports",
+        "test_migration.MigrationTests.test_older_index_schema_is_rebuilt_not_trusted",
+        "test_migration.MigrationTests.test_older_ledger_without_new_tables_opens_and_serves"
+      ],
+      "remaining": [
+        "All derivative and export crash transitions, journal freshness owner workflow"
+      ]
+    },
+    "R-10": {
+      "tests": [
+        "test_capture.CaptureStoreTests.test_actual_process_death_at_capture_stop_transitions",
+        "test_capture.CaptureStoreTests.test_missing_prompt_interrupted_flush_and_bounds",
+        "test_capture.CaptureStoreTests.test_paired_episode_is_redacted_deduped_and_conflicts_are_counted",
+        "test_capture.CaptureStoreTests.test_purge_blocks_recapture_sharing_refuses_and_export_restores",
+        "test_capture.CaptureStoreTests.test_service_binds_capture_to_workspace_and_grant",
+        "test_capture.CopilotHookTests.test_copilot_endpoints_deliver_and_capture_from_the_transcript_through_a_real_daemon",
+        "test_capture.CopilotHookTests.test_copilot_hook_file_is_owned_previewed_written_and_checked",
+        "test_capture.CopilotHookTests.test_copilot_turn_reads_a_bounded_tail",
+        "test_capture.HookProcessTests.test_hook_endpoints_capture_once_through_a_real_daemon",
+        "test_capture.HookSettingsTests.test_preview_never_writes_and_write_merges_with_backup",
+        "test_hook.HookLauncherTests.test_capture_payload_shape",
+        "test_hook.HookLauncherTests.test_copilot_shape_routes_by_event_flag_and_rejects_foreign_shapes",
+        "test_hook.HookLauncherTests.test_no_launch_outside_workspace_or_for_invalid_input",
+        "test_hook.HookLauncherTests.test_no_workspace_process_exits_silently",
+        "test_hook.HookLauncherTests.test_outermost_root_and_host_isolation",
+        "test_hook.HookLauncherTests.test_output_bound",
+        "test_installed_clients.InstalledClientTests.test_claude_code_duplicate_hooks",
+        "test_installed_clients.InstalledClientTests.test_claude_code_hook_disabled",
+        "test_installed_clients.InstalledClientTests.test_claude_code_to_codex_cli",
+        "test_installed_clients.InstalledClientTests.test_claude_code_to_copilot_cli",
+        "test_installed_clients.InstalledClientTests.test_codex_cli_duplicate_hooks",
+        "test_installed_clients.InstalledClientTests.test_codex_cli_hook_disabled",
+        "test_installed_clients.InstalledClientTests.test_codex_cli_to_claude_code",
+        "test_installed_clients.InstalledClientTests.test_codex_cli_to_copilot_cli",
+        "test_installed_clients.InstalledClientTests.test_copilot_cli_duplicate_hooks",
+        "test_installed_clients.InstalledClientTests.test_copilot_cli_hook_disabled",
+        "test_installed_clients.InstalledClientTests.test_copilot_cli_to_claude_code",
+        "test_installed_clients.InstalledClientTests.test_copilot_cli_to_codex_cli",
+        "test_instructions.InstructionTests.test_cli_process_writes_and_checks",
+        "test_instructions.InstructionTests.test_existing_files_are_preserved_outside_the_fence",
+        "test_instructions.InstructionTests.test_fresh_write_is_idempotent_and_bounded",
+        "test_import.ImportParsingTests.test_candidates_carry_import_citations_with_lineage",
+        "test_import.ImportStoreTests.test_bulk_needs_the_flag_and_other_hosts_and_scopes"
+      ],
+      "remaining": [
+        "claude_code_to_codex_cli and codex_cli_to_claude_code on the current wheel (last passed on an older wheel)",
+        "codex_cli_to_copilot_cli and copilot_cli_to_codex_cli",
+        "codex_cli_hook_disabled and codex_cli_duplicate_hooks (Codex hooks unbuilt; reserve resets 2026-09-18)"
+      ]
+    },
+    "R-11": {
+      "tests": [
+        "test_service.ServiceTests.test_real_daemon_pipe_and_authority",
+        "test_security.SecurityTests.test_manifest_exclusion_blocks_source_before_read",
+        "test_service.ServiceTests.test_mcp_process_survives_deep_json_and_malformed_envelopes",
+        "test_import.ImportStoreTests.test_import_is_owner_only_idempotent_redacted_and_never_shared",
+        "test_import.ImportParsingTests.test_paths_are_refused_before_any_read",
+        "test_consolidation.ConsolidatorTests.test_tool_outputs_are_truncated_hashed_and_yield_tool_derived_facts",
+        "test_security_attacks.SecretPatternTests.test_broadened_patterns_redact_known_token_shapes_and_leave_prose",
+        "test_security_attacks.AttackFixtureTests.test_forged_user_statements_never_gain_user_origin",
+        "test_security_attacks.AttackFixtureTests.test_tool_result_laundering_stays_tool_derived_and_inert",
+        "test_security_attacks.AttackFixtureTests.test_poisoned_shares_are_refused_or_admitted_without_authority",
+        "test_security_attacks.AttackFixtureTests.test_false_citations_and_malicious_tracked_comments_are_evidence_not_authority",
+        "test_security_attacks.AttackFixtureTests.test_multistep_promotion_has_no_agent_path"
+      ],
+      "remaining": [
+        "Behavioural poisoning through retrieval on installed hosts; resident contamination once a resident block exists"
+      ]
+    },
+    "R-12": {
+      "tests": [
+        "test_security.SecurityTests.test_recall_envelope_is_bounded_and_truncation_is_honest",
+        "test_capture.CaptureStoreTests.test_missing_prompt_interrupted_flush_and_bounds",
+        "test_security.SecurityTests.test_bounds_and_fixed_origin_parameters",
+        "test_policy.LoudFailureAndBoundTests.test_index_retries_are_counted_bounded_and_never_drop_events",
+        "test_policy.SessionStartSliceTests.test_slice_stays_under_the_token_bound_with_a_large_workspace",
+        "test_hook.HookLauncherTests.test_output_bound"
+      ],
+      "remaining": [
+        "Consumer-tokenizer measurement on an installed host; over-cap resident write once a resident block exists"
+      ]
+    },
+    "R-13": {
+      "tests": [
+        "test_core.StoreTests.test_failed_index_does_not_lose_ledger",
+        "test_service.ServiceTests.test_real_daemon_pipe_and_authority",
+        "test_policy.LoudFailureAndBoundTests.test_missing_fts5_is_an_installation_failure",
+        "test_policy.LoudFailureAndBoundTests.test_corrupt_relation_and_index_structures_fail_doctor",
+        "test_policy.TeamPolicyTests.test_policy_governs_the_store_and_a_pinned_version_mismatch_fails_doctor",
+        "test_core.StoreTests.test_redaction_before_disk_and_no_configuration_escape"
+      ],
+      "remaining": [
+        "Unavailable-daemon doctor case through an installed host; Linux and macOS execution"
+      ]
+    },
+    "R-14": {
+      "tests": [
+        "test_retrieval.ScaleToolTests.test_measurement_tool_records_core_ipc_and_session_start_distributions"
+      ],
+      "remaining": [
+        "Recorded 100k four-client run on verified 8-core/16 GB/SSD hardware (docs/validation/scale-2026-09-13.json is a local measurement on unverified hardware)",
+        "SessionStart p95 through an installed host"
+      ]
+    },
+    "R-15": {
+      "tests": [
+        "test_workspace.WorkspaceTests.test_receipts_do_not_dirty_checkout"
+      ],
+      "remaining": []
+    },
+    "R-16": {
+      "tests": [],
+      "remaining": [
+        "Real pilot and installed first-turn hints"
+      ]
+    },
+    "R-17": {
+      "tests": [
+        "test_security.SecurityTests.test_disabled_retirement_disputes_and_explicit_revision_works",
+        "test_consolidation.ConsolidatorTests.test_disabled_judge_disputes_competing_values_and_retires_nothing",
+        "test_consolidation.ConsolidatorTests.test_same_value_adds_evidence_and_recurrence_is_a_new_assertion",
+        "test_consolidation.ExtractionTests.test_statements_match_only_the_declared_vocabulary"
+      ],
+      "remaining": [
+        "Enabled mode: two judge configurations on frozen acceptance data with precision, recall and recurrence counts (needs inference)"
+      ]
+    },
+    "R-18": {
+      "tests": [
+        "test_core.StoreTests.test_redaction_before_disk_and_no_configuration_escape",
+        "test_security.SecurityTests.test_closed_import_and_event_schemas",
+        "test_retrieval.IdentifierAndAliasTests.test_source_backed_aliases_expand_once_and_ambiguity_expands_nothing",
+        "test_retrieval.ExpansionAndRankingTests.test_scope_widens_from_repo_to_monorepo_to_dependency_to_user_nearest_first"
+      ],
+      "remaining": [
+        "Installed network-disabled suite, transitive dependency and adapter audit"
+      ]
+    },
+    "clean-install": {
+      "tests": [
+        "test_verification_inputs.VerificationInputTests.test_changes_additions_and_removals_invalidate_evidence"
+      ],
+      "remaining": [
+        "Build package and run release gate from clean supported install"
+      ]
+    },
+    "three-platforms": {
+      "tests": [],
+      "remaining": [
+        "Linux and macOS execution; no platform support inferred from Windows"
+      ]
+    },
+    "pilot-week": {
+      "tests": [],
+      "remaining": [
+        "Genuine seven-day pilot, code/config/client bindings and R-16 metrics"
+      ]
+    },
+    "fixture-calibration": {
+      "tests": [],
+      "remaining": [
+        "Complete fixture and scorer calibration"
+      ]
+    }
+  }
+}
